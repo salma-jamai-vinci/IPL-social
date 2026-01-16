@@ -29,6 +29,11 @@ describe("ValidateEmail", () => {
             expect(actual).toBe(false);
         });
 
+        it("should return true when given an email with @ and a dot in the email", () => {
+            let actual = validateEmail.isValid("a@b.com");
+            expect(actual).toBe(true);
+        });
+
 
     })
 })
