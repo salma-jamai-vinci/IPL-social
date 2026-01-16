@@ -7,6 +7,8 @@ export class ValidateEmail {
     if (!domain.includes(".")) return false;
     if (domain.endsWith(".")) return false;
 
+    if (email.includes(" ")) return false;
+
     return true;
   }
 }

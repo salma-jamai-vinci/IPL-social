@@ -34,6 +34,11 @@ describe("ValidateEmail", () => {
             expect(actual).toBe(true);
         });
 
+        it("should return false when given an email with an space", () => {
+            let actual = validateEmail.isValid("a @b.com");
+            expect(actual).toBe(false);
+        });
+
 
     })
 })
