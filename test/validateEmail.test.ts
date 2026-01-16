@@ -9,9 +9,9 @@ describe("ValidateEmail", () => {
             expect(actual).toBe(false);
         })
 
-        it("should return true when given an email with @", () => {
-            let actual = validateEmail.isValid("@");
-            expect(actual).toBe(true);
+        it("should return false when given an email whitout @", () => {
+            let actual = validateEmail.isValid("abc");
+            expect(actual).toBe(false);
         })
 
         it("should return false when given an email finishing with a dot", () => {
