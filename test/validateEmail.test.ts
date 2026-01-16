@@ -9,5 +9,11 @@ describe("ValidateEmail", () => {
             expect(actual).toBe(false);
         })
 
+        it("should return true when given an email with @", () => {
+            let validateEmail = new ValidateEmail();
+            let actual = validateEmail.isValid("@");
+            expect(actual).toBe(true);
+        })
+
     })
 })
