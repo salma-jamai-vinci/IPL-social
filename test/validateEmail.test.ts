@@ -19,5 +19,11 @@ describe("ValidateEmail", () => {
             expect(actual).toBe(false);
         })
 
+        it("should return false when given an email with @ but no domain dot", () => {
+        let actual = validateEmail.isValid("a@b");
+        expect(actual).toBe(false); 
+        })
+
+
     })
 })
