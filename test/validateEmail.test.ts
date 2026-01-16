@@ -43,5 +43,11 @@ describe("ValidateEmail", () => {
       let actual = validateEmail.isValid("@b.com");
       expect(actual).toBe(false);
     });
+    
+    it("should return false when given an email with no text after the @", () => {
+      let actual = validateEmail.isValid("a@");
+      expect(actual).toBe(false); 
+    });
+
   });
 });
