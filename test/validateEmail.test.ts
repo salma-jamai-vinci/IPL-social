@@ -14,5 +14,10 @@ describe("ValidateEmail", () => {
             expect(actual).toBe(true);
         })
 
+        it("should return false when given an email finishing with a dot", () => {
+            let actual = validateEmail.isValid("abc@.");
+            expect(actual).toBe(false);
+        })
+
     })
 })
