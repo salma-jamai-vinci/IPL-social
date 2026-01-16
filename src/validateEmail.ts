@@ -9,6 +9,10 @@ export class ValidateEmail {
 
     if (email.includes(" ")) return false;
 
+    const check = email.slice(0, atIndex);
+    if (check.length === 0) return false;
+    if (domain.length === 0) return false;
+
     return true;
   }
 }
